@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arduinome</title>
+    <meta name="description" content="Большая инструкция по постройке Arduinome — клона Monome">
+    <meta name="keywords" content="ардуино, моном">
+    <link rel="canonical" href="http://localhost:4000/blog/2012/01/09/1/">
+    <link rel="alternate" type="application/rss+xml" title="Likewhoa" href="/feed.xml" />
+    <!-- google search console -->
+    <meta name="google-site-verification" content="FpxZXaSmPze2lNe7uty69AA9cZZT6meINY4n2VCDZCg" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css?201911051407" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Arduinome">
+    <meta property="og:description" content="Картинки и тексты.">
+    <meta property="og:url" content="http://localhost:4000/blog/2012/01/09/1/">
+    <meta property="og:site_name" content="Likewhoa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Arduinome" />
+    <meta name="twitter:description" content="Большая инструкция по постройке Arduinome — клона Monome" />
+    <meta name="twitter:url" content="http://localhost:4000/blog/2012/01/09/1/" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAo5ogjjko">
+    <link rel="shortcut icon" href="/favicon.ico?v=YAo5ogjjko">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="animated fadeIn">
+<article class="menu menu-light">	
+	<div class="bread">
+		<ol class="bread-list">
+			<li class="home">
+				<a href="/">
+					Index
+				</a>
+			</li>
+			<li><a href="/Blog/">Blog</a></li>
+			<li>Arduinome</li>
+		</ol>
+	</div>
+	<div>
+		<form class="search-container" action="https://www.google.com/search" method="GET">
+			<input id="search-box" type="text" class="search-box" name="q" />
+			<label for="search-box">
+				<span class="search-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9479 6.15909C11.9479 8.92051 9.70931 11.1591 6.94788 11.1591C4.18646 11.1591 1.94788 8.92051 1.94788 6.15909C1.94788 3.39766 4.18646 1.15909 6.94788 1.15909C9.70931 1.15909 11.9479 3.39766 11.9479 6.15909ZM10.8227 10.7402C9.77734 11.6254 8.42494 12.1591 6.94788 12.1591C3.63418 12.1591 0.947884 9.4728 0.947884 6.15909C0.947884 2.84538 3.63418 0.159088 6.94788 0.159088C10.2616 0.159088 12.9479 2.84538 12.9479 6.15909C12.9479 7.63574 12.4145 8.98779 11.5298 10.0331L16.7974 15.3007C16.9927 15.496 16.9927 15.8126 16.7974 16.0078C16.6022 16.2031 16.2856 16.2031 16.0903 16.0078L10.8227 10.7402Z">
+					</svg>
+				</span>
+			</label>
+			<input type="hidden" name="sitesearch" value="likewhoa.ru">
+		</form>
+	</div>
+
+		<!--
+		<div>
+			<a href="/feed.xml">
+				<span class="rss-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 10.6467C0.949764 10.3706 1.17362 10.1467 1.44976 10.1467C4.4867 10.1467 6.94862 12.6086 6.94862 15.6456C6.94862 15.9217 6.72477 16.1456 6.44862 16.1456C6.17248 16.1456 5.94862 15.9217 5.94862 15.6456C5.94862 13.1609 3.93442 11.1467 1.44976 11.1467C1.17362 11.1467 0.949764 10.9228 0.949764 10.6467Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 5.64784C0.949764 5.3717 1.17362 5.14784 1.44976 5.14784C7.24749 5.14784 11.9475 9.84783 11.9475 15.6456C11.9475 15.9217 11.7236 16.1456 11.4475 16.1456C11.1713 16.1456 10.9475 15.9217 10.9475 15.6456C10.9475 10.4001 6.69521 6.14784 1.44976 6.14784C1.17362 6.14784 0.949764 5.92398 0.949764 5.64784Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 0.648987C0.949764 0.372844 1.17362 0.148987 1.44976 0.148987C10.0083 0.148987 16.9463 7.08704 16.9463 15.6456C16.9463 15.9217 16.7225 16.1456 16.4463 16.1456C16.1702 16.1456 15.9463 15.9217 15.9463 15.6456C15.9463 7.63933 9.456 1.14899 1.44976 1.14899C1.17362 1.14899 0.949764 0.925129 0.949764 0.648987Z"/>
+						<path d="M2.97483 15.1367C2.97483 15.6954 2.52196 16.1482 1.96331 16.1482C1.40466 16.1482 0.95179 15.6954 0.95179 15.1367C0.95179 14.5781 1.40466 14.1252 1.96331 14.1252C2.52196 14.1252 2.97483 14.5781 2.97483 15.1367Z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		дальше можно просто добавлять иконки
+		<div>b2</div>
+		<div>b3</div>
+		<div>b4</div>
+		-->
+</article>
+<header style="background-color: #871600; background-image: url('https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/arduinome-cover.jpg');">
+    <div class="title" style="top:42%;">
+        <h1>Большая инструкция по&nbsp;постройке Arduinome <strong>—&nbsp;клона Monome</strong></h1>
+    </div>
+</header>
+
+<aside>
+
+
+<p class="subtitle">После сборки моего Arduinome оказалось, что на&nbsp;русском языке информации практические нет, но, к&nbsp;счастью, я&nbsp;сохранил большую часть и&nbsp;местами дополнил. Точное следование инструкциям позволит легко собрать ардуином и&nbsp;запустить его с&nbsp;первого раза.</p>
+</aside>
+<aside>
+<p>Рассмотрим подробнее, из&nbsp;чего состоит любое моном-подобное устройство. И&nbsp;Monome, и&nbsp;Arduinome состоят из&nbsp;двух частей:</p>
+
+<p><strong>Logic Kit</strong> — часть отвечающая за обработку данных и&nbsp;связь с&nbsp;компьютером.</p>
+<p><strong>Keypad Kit</strong> — часть отвечающая за контакт с&nbsp;пользователем, то&nbsp;есть набор силиконовых кнопок, светодиодов и платы под них.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.js"></script>
+    <div class="fotorama" data-captions="false" data-loop="true" data-width="100%"">
+        <img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/arduino-unsped-shield.jpg" data-caption="Logic Kit на базе Arduino и Unsped Shield">
+        <img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/logic-kit-monome.jpg" data-caption="Оригинальный Logic Kit от Monome.org">
+        <img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/logic-kit-starfire.jpg" data-caption="Logic Kit на базе Starfire PCB">
+        <img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/sparkfun-keypad-kit.jpg" data-caption="Keypad Kit на базе Button Pad 8*8 PCB и кнопок со Sparkfun.com">
+        <img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/monome-keypad-kit.jpg" data-caption="Оригинальный Keypad Kit от Monome.org">
+    </div>
+    <figcaption class="fotorama-caption"></figcaption>
+    <script type="text/javascript">//выносные капшны фоторамы
+$(".fotorama").on("fotorama:show",function(o,a){a.$caption=a.$caption||$(this).next(".fotorama-caption"),a.$caption.text(a.activeFrame.caption)}).fotorama();</script>
+
+
+
+
+
+<p><a href="http://likewhoa.ru/blog/arduinome-parts/">Обновленный список деталей</a> для сборки на базе Starfire PCB и список деталей для тех, кто собирает моном на базе Arduino + Unsped Shield. Указанные в списке магазины — всего лишь моя рекомендация, вы же можете купить все детали где хотите. Резисторы и конденсаторы проще заказать вместе с кнопками, чем искать их в чип-и-дипе например. И кстати DIP-панели под микросхемы использовать не обязательно, просто в случае чего микросхему проще будет заменить без выпайки.</p>
+
+
+<h2>Особенности распайки плат Arduinome</h2>
+
+<p>Плата Button Pad 8х8 PCB, порядок соединения:</p>
+
+<p>Лицевая сторона, со светодиодами. Если держать плату лицевой стороной к себе так, что разъемы будут справа и сверху, то анод (длинная ножка) светодиодов должны быть слева, а катод справа:</p>
+
+
+
+
+<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/button-pad-shield.jpg" alt="Плата Button Pad 8х8 PCB">
+<figcaption>Плата Button Pad 8х8 PCB</figcaption>
+
+<p>Обратная сторона, с диодами. Если держать плату тыльной стороной к себе так, что разъемы будут справа и сверху, то диод должен располагаться, на своей площадке, черной полоской (катод) справа:</p>
+
+
+
+
+<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/button-pad-shield-back.jpg" alt="Плата Button Pad 8х8 PCB">
+<figcaption>Плата Button Pad 8х8 PCB</figcaption>
+
+
+<p><strong>Unsped Shield:</strong> правильность распайки, подготовка резисторной сборки.</p>
+
+<p>Обрежьте 10-ую ножку резисторной сборки — необходимы только первые 9. Помните, резисторная сборка не является симметричной, не обрезайте 1-ую ножку, которая обозначена точкой.</p>
+
+
+<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/unsped-shield.jpg" alt="Unsped Shield" style="width: auto;">
+
+
+<p>На следующем рисунке показана маркировка с оригинального Arduinome Logic Board. Так же можете посмотреть, где и какой элемент должен быть. Будьте внимательны с полярностью, где это требуется, и правильной ориентацией элементов на плате, согласно меток и ключей на их корпусе.</p>
+
+<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/arduino/arduinome-logic-board.jpg" alt="Arduinome Logic Board" style="width: auto;">
+
+
+<h2>Выбор номинала резистора Rset</h2>
+
+<p>Темы на форуме Arduino, касающиеся MAX72XX, часто свидетельствуют о том, что есть некоторая неопределенность, когда речь заходит о выборе значения для резистора RSet. Он является единственным компонентом, который ограничивает ток для всех отдельных светодиодов. В то время как некоторые думают, что могут подбирать значение этого резистора в качестве способа управления яркостью светодиодов, его реальная цель заключается в том, чтобы защитить MAX72XX и светодиоды от недопустимых токов. Настройка яркости дисплея может и должно быть сделано программным обеспечением.</p>
+
+<p>Чтобы узнать правильные значения для RSet вам нужна информация по MAX72XX и светодиодам, которая есть в документации к этим компонентам.</p>
+<p>Из спецификации светодиодов Вам понадобятся только два значения:</p>
+
+<p><strong>DC Forward current</strong> (mA) — максимальный ток, разрешенный для работы светодиода без повреждения его в долгосрочной перспективе.</p>
+<p><strong>Forward voltage</strong> (V) — максимальное напряжение, при котором светодиод работает.</p>
+
+<p>Максимальное напряжение имеет определённое значение, которое зависит (главным образом) от цвета светодиода. Вам следует ограничить электрический ток приходящий на светодиоды через резистор RSet. Так как DC Forward current представляет собой максимальную величину, которая не может быть превышена, согласитесь на немного более низкий электрический ток. Стандартные светодиоды и 7-сегментные дисплеи чаще всего имеют значение 25-30 mA. Ограничение до 20 mA будет хорошим выбором.</p>
+
+<p>С этими двумя значениями из спецификации светодиодов мы можем теперь найти получающееся значение для резистора RSet в таблице ниже, которая скопирована из спецификации MAX72XX:</p>
+
+    <table class="table">
+    <thead>
+      <th class="table__heading">ISeg</th>
+      <th class="table__heading">1.5V</th>
+      <th class="table__heading">2V</th>
+      <th class="table__heading">2.5V</th>
+      <th class="table__heading">3.0V</th>
+      <th class="table__heading">3.5V</th>
+    </thead>
+    <tr class="table__row">
+      <td class="table__content" data-heading="ISeg">40 mA</td>
+      <td class="table__content" data-heading="1.5V">12.2 kΩ</td>
+      <td class="table__content" data-heading="2V">11.8 kΩ</td>
+      <td class="table__content" data-heading="2.5V">11.0 kΩ</td>
+      <td class="table__content" data-heading="3.0V">10.6 kΩ</td>
+      <td class="table__content" data-heading="3.5V">9.69 kΩ</td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__content" data-heading="ISeg">30 mA</td>
+      <td class="table__content" data-heading="1.5V">17.8 kΩ</td>
+      <td class="table__content" data-heading="2V">17.1 kΩ</td>
+      <td class="table__content" data-heading="2.5V">15.8 kΩ</td>
+      <td class="table__content" data-heading="3.0V">15.0 kΩ</td>
+      <td class="table__content" data-heading="3.5V">14.0 kΩ</td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__content" data-heading="ISeg">20 mA</td>
+      <td class="table__content" data-heading="1.5V">29.8 kΩ</td>
+      <td class="table__content" data-heading="2V">28.0 kΩ</td>
+      <td class="table__content" data-heading="2.5V">25.9 kΩ</td>
+      <td class="table__content" data-heading="3.0V">24.5 kΩ</td>
+      <td class="table__content" data-heading="3.5V">22.6 kΩ</td>
+    </tr>
+    <tr class="table__row">
+      <td class="table__content" data-heading="ISeg">10 mA</td>
+      <td class="table__content" data-heading="1.5V">66.7 kΩ</td>
+      <td class="table__content" data-heading="2V">63.7 kΩ</td>
+      <td class="table__content" data-heading="2.5V">59.3 kΩ</td>
+      <td class="table__content" data-heading="3.0V">55.4 kΩ</td>
+      <td class="table__content" data-heading="3.5V">51.2 kΩ</td>
+    </tr>
+    </table>
+
+<p>Вот один пример: у меня есть 5×7 точек «ярко красная» LED матрица. В спецификации заявлено максимальное напряжение 2.0 V, максимальный ток ограничивается 25 mA. Я соглашусь на 20 mA, чтобы остаться немного дальше от абсолютных пределов.</p>
+
+<p>Из приведенной выше таблицы видно, что правильное значение для RSet было бы 28.0 kΩ. Но вы можете иметь проблемы с тем, что бы найти точное значение в магазинах, запомните, всегда безопасно взять более высокие значения. Более вероятными значениями будут 30 kΩ или 33 kΩ. Светодиоды будут выглядеть немного более тусклыми с этими значениями, но, поскольку это затрагивает все светодиоды в матрице, вы, вероятно, даже не заметите разницы. Это также уменьшает электрический ток питания, который необходим, и это может быть хорошей новостью, если ваш проект работает на батарейках.</p>
+<p>Использование светодиодов различных цветов (смешивание) в одной матрице очень не рекомендуется с MAX72XX. Существует только один резистор RSet, который ограничивает ток для всех светодиодов. После того как вы посмотрели все резисторы, требуемые для каждого цвета, вам придется остановиться на самом большом значении. Яркость светодиодов с разными цветами, не очень совпадает, таким образом это будет метод проб и ошибок, что бы подобрать правильные светодиоды.</p>
+
+<h2>Устанавливаем прошивку Arduinome</h2>
+
+<p>Убедитесь, что у вас установлены драйвера для Arduino. Для начала работы на потребуется следующий софт: Последняя версия Arduino Software (на данный момент последняя версия 16), последняя версия прошивки Arduinome, программа ArduinomeSerial для вашей ОС (скачивается там же где и прошивка), программа MProg для прошивки чипа USB (только под Windows).</p>
+
+<p>Итак, начнем. Сначала прошьем чип USB:</p>
+
+<ol>
+<li>Подключите Arduino к вашему компьютеру.</li>
+<li>Запустите программу MProg.</li>
+<li> Далее меню Tools ⟶ Read and Parse.</li>
+<li>На панели «USB Serial Number Control», поставьте галочку «Use Fixed Serial Number» и напечатайте в окошке Number что-нибудь вроде «a40h-001» или любую вариацию «a40h-xxx». a40h — самая важная чаcть, а трехзначный номер поставьте какой угодно.</li>
+<li>Далее меню File ⟶ Save As… и сохраните файл куда угодно с любым названием.</li>
+<li>Далее меню Device Menu ⟶ Program.</li>
+<li>Вы должны увидеть сообщение такого вида «programmed device with…». Это значит все прошло удачно.</li>
+<li>Отсоедините и снова присоедините Arduino.</li>
+</ol>
+<p>Теперь установим непосредственно прошивку Arduinome:</p>
+<ol>
+<li>Распакуйте скачанную оболочку Arduino и прошивку ArduinomeFirmware в отдельные папки.</li>
+<li>Запустите оболочку Arduino.</li>
+<li>В меню настроек выберите тип Arduino (т. е. Duemilanove) и COM-порт, к которому подключен Arduino.</li>
+<li>Откройте через меню файл прошивки ArduinomeFirmware *.pde.</li>
+<li>Далее меню File ⟶ Upload to I/O Board.</li>
+<li>Если все пройдет удачно, то в черном окошке внизу не будет ошибок.</li>
+</ol>
+<p>Далее запустите ArduinomeSerial. Если в поле Device стоит то, что вы вводили в MProg, значит все сделано правильно.</p></aside>
+
+<article class="footer">
+  <div class="f-left">Последняя запись — 
+ 
+30
+октября
+  
+2019,
+ всего их 61. Jekyll 3.8.5.
+</div>
+<div>tg @antwon</div>
+</article>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="/static/index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+<!-- google counter -->
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26451647-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+<!-- end google counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(11453989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/11453989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>

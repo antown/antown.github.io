@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Базовая страница стилей</title>
+    <meta name="description" content="Картинки и тексты.">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://localhost:4000/style/">
+    <link rel="alternate" type="application/rss+xml" title="Likewhoa" href="/feed.xml" />
+    <!-- google search console -->
+    <meta name="google-site-verification" content="FpxZXaSmPze2lNe7uty69AA9cZZT6meINY4n2VCDZCg" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css?201911051407" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Базовая страница стилей">
+    <meta property="og:description" content="Картинки и тексты.">
+    <meta property="og:url" content="http://localhost:4000/style/">
+    <meta property="og:site_name" content="Likewhoa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Базовая страница стилей" />
+    <meta name="twitter:description" content="Картинки и тексты." />
+    <meta name="twitter:url" content="http://localhost:4000/style/" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAo5ogjjko">
+    <link rel="shortcut icon" href="/favicon.ico?v=YAo5ogjjko">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="animated fadeIn">
+<article class="menu">	
+	<div class="bread">
+		<ol class="bread-list">
+			<li class="home">
+				<a href="/">
+					Index
+				</a>
+			</li>
+			
+			<li>Базовая страница стилей</li>
+		</ol>
+	</div>
+	<div>
+		<form class="search-container" action="https://www.google.com/search" method="GET">
+			<input id="search-box" type="text" class="search-box" name="q" />
+			<label for="search-box">
+				<span class="search-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9479 6.15909C11.9479 8.92051 9.70931 11.1591 6.94788 11.1591C4.18646 11.1591 1.94788 8.92051 1.94788 6.15909C1.94788 3.39766 4.18646 1.15909 6.94788 1.15909C9.70931 1.15909 11.9479 3.39766 11.9479 6.15909ZM10.8227 10.7402C9.77734 11.6254 8.42494 12.1591 6.94788 12.1591C3.63418 12.1591 0.947884 9.4728 0.947884 6.15909C0.947884 2.84538 3.63418 0.159088 6.94788 0.159088C10.2616 0.159088 12.9479 2.84538 12.9479 6.15909C12.9479 7.63574 12.4145 8.98779 11.5298 10.0331L16.7974 15.3007C16.9927 15.496 16.9927 15.8126 16.7974 16.0078C16.6022 16.2031 16.2856 16.2031 16.0903 16.0078L10.8227 10.7402Z">
+					</svg>
+				</span>
+			</label>
+			<input type="hidden" name="sitesearch" value="likewhoa.ru">
+		</form>
+	</div>
+
+		<!--
+		<div>
+			<a href="/feed.xml">
+				<span class="rss-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 10.6467C0.949764 10.3706 1.17362 10.1467 1.44976 10.1467C4.4867 10.1467 6.94862 12.6086 6.94862 15.6456C6.94862 15.9217 6.72477 16.1456 6.44862 16.1456C6.17248 16.1456 5.94862 15.9217 5.94862 15.6456C5.94862 13.1609 3.93442 11.1467 1.44976 11.1467C1.17362 11.1467 0.949764 10.9228 0.949764 10.6467Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 5.64784C0.949764 5.3717 1.17362 5.14784 1.44976 5.14784C7.24749 5.14784 11.9475 9.84783 11.9475 15.6456C11.9475 15.9217 11.7236 16.1456 11.4475 16.1456C11.1713 16.1456 10.9475 15.9217 10.9475 15.6456C10.9475 10.4001 6.69521 6.14784 1.44976 6.14784C1.17362 6.14784 0.949764 5.92398 0.949764 5.64784Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 0.648987C0.949764 0.372844 1.17362 0.148987 1.44976 0.148987C10.0083 0.148987 16.9463 7.08704 16.9463 15.6456C16.9463 15.9217 16.7225 16.1456 16.4463 16.1456C16.1702 16.1456 15.9463 15.9217 15.9463 15.6456C15.9463 7.63933 9.456 1.14899 1.44976 1.14899C1.17362 1.14899 0.949764 0.925129 0.949764 0.648987Z"/>
+						<path d="M2.97483 15.1367C2.97483 15.6954 2.52196 16.1482 1.96331 16.1482C1.40466 16.1482 0.95179 15.6954 0.95179 15.1367C0.95179 14.5781 1.40466 14.1252 1.96331 14.1252C2.52196 14.1252 2.97483 14.5781 2.97483 15.1367Z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		дальше можно просто добавлять иконки
+		<div>b2</div>
+		<div>b3</div>
+		<div>b4</div>
+		-->
+</article>
+<aside>
+
+	<h1>Стили оформления и всякая верстка</h1>
+	
+	<p class="subtitle">Subtitle: на этой странице собраны все стили оформления и&nbsp;гайды построения страниц.</p>
+	
+	<p>На данный момент существуют два вида построения страниц: с выравниванием по левому краю и по центру. Этот текст и примеры ниже набраны в колонке по левому краю. В начале страницы распологается блок с картинкой и заголовком. Конечно, это не обязательный элемент, вполне можно использовать просто заголовок H1.</p>
+
+
+	<h2>Текстовые блоки h2</h2>
+	
+	<p>Указания пастора Кобела оказались толковыми, и через несколько часов я уже подъезжал к ферме Дэна Кондона. Аккуратный двухэтажный дом возвышался среди поросшей кустарником долины. Рядом с домом я заметил большой амбар, или бывший амбар, ныне полуразвалившийся, и больше никаких построек не припомню. На лугу паслись какие-то не то коровы, не то быки.</p>
+
+	<h3>Заголовок третьего уровня h3</h3>
+	
+
+<div class="with-side">
+	<p>У этого абзаца есть выноска. Ему добавляется класс with-side, с относительным выравниванием. Следом идет блок side, с абсолютным. На узком экране выноска перелазит в основную колонку.</p>
+
+
+
+
+
+<!-- alert block -->
+<div class="alert" style="background-color: #111; color: #ccc">
+	<p>Блок-алерт. Цвета указываются во front matter или инлайн.</p>
+</div>
+<!-- alert block -->
+
+
+
+
+
+
+	<div class="side">
+		Текст выноски наследует цвет родительского блока. Первая строка выравнивается по базовой линии первой строки (я надеюсь, что это так), дальше ритм повторяется через строку.
+	</div>
+	<div class="sidel">2077</div>
+</div>
+
+
+
+<div class="with-side">
+	<p>Вот у этого абзаца тоже есть выноска в виде картинки. Картинка в выноске занимает 100% ширины, но не больше 100% своего реального размера. Дальше идет бесполезный текст для придания объема. Со временем я вынес большинство элементов в отельные cscc для того, чтобы управляться с базовым набором было легче. Разово используемы селекторы лежат в файле <em>custom</em>. В var лежат все переменные, ими удобно управлять.</p>
+	<div class="side">
+		<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="" data-action="zoom">
+	</div>
+</div>
+
+<div class="small">
+	<p>Мелкий текст .small унифицирован и используется в разных местах: мелкие заметки в тексте, теги, подписи в конце статей ui. Полагаю, это сделано не оптимально, но пока что заниматься рефакторингом смысла не вижу.</p>
+</div>
+
+
+
+
+
+<blockquote>Дорога из Марьина огибала лесок; легкая пыль лежала на ней, еще не тронутая со вчерашнего дня ни колесом, ни ногою. Базаров невольно посматривал вдоль той дороги, рвал и кусал траву.</blockquote>
+
+
+
+
+
+<h2>Заголовок второго уровня в несколько строк с оступом сверху и уменьшенным межбуквенным расстоянием</h2>
+
+<p>Не все отступы приведены в порядок, но дело не стоит на месте. Ниже простая картинка в тексте.</p>
+
+<h3>Заголовок третьего уровня в несколько строк с оступом сверху и уменьшенным межбуквенным расстоянием</h3>
+
+<img src="https://farm9.staticflickr.com/8204/8164153458_17bd18fe44_o_d.jpg" alt="" data-action="zoom">
+<figcaption>Картинка без класса. Так же у неё есть длинное описание, которое показывает размеры блока текста figcaption.</figcaption>
+
+
+
+
+
+
+<h2>Фотогрид</h2>
+<p>Крутая галерея на флексбоксе, сама занимает столько места, сколько можно и подстраивает количество строк.</p>
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/territorystudio00050.jpg" data-size="1600x780">
+			<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/territorystudio00050.jpg" alt="альттекст"></a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/territorystudio00049.jpg" data-size="1600x780">
+			<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/territorystudio00049.jpg" alt="альттекст"></a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/bl00042.jpg" data-size="1600x780">
+			<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/bl00042.jpg" alt="альттекст"></a>
+		</figure>
+		<figure class="break"> <!-- кадр с новой строки, 100% ширины -->
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/bl00042.jpg" data-size="1600x780">
+			<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/bl00042.jpg" alt="альттекст"></a>
+		</figure>
+	</div>
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe.
+  It's a separate element, as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+
+
+
+
+<h2>Фоторама</h2>
+<p>Старая версия, но обновлять лень.</p>
+
+<!-- fotorama -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.2/fotorama.js"></script>
+<div class="fotorama" data-captions="false" data-loop="true">
+	<img src="https://farm5.staticflickr.com/4474/37526083646_e847df61bc_k_d.jpg" data-caption="Фоторама">
+	<img src="https://farm5.staticflickr.com/4448/37316042770_39aab4b625_k_d.jpg" data-caption="Подписи вынесены">
+	<img src="https://farm5.staticflickr.com/4472/37526081056_cfe28e897d_k_d.jpg" data-caption="Задаются в data-caption">
+</div>
+<figcaption class="fotorama-caption"></figcaption>
+<script type="text/javascript">//выносные капшны фоторамы
+$(".fotorama").on("fotorama:show",function(o,a){a.$caption=a.$caption||$(this).next(".fotorama-caption"),a.$caption.text(a.activeFrame.caption)}).fotorama();</script>
+<!-- fotorama -->
+
+
+
+
+
+<h2>Аудиоплеер</h2>
+<br>
+<!-- audio player -->
+<script src="/static/jouele/jouele.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/jouele/jouele.min.css" />
+<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/AnthonyRother-Dualis.mp3" class="jouele">
+	Anthony Rother — Dualis
+</a>
+<!-- audio player -->
+
+
+
+
+
+<h2>Список</h2>
+<!-- list -->
+<ul>
+	<li>Камень</li>
+	<li>Ножницы</li>
+	<li>Бумага</li>
+</ul>
+<ol>
+	<li>Крокодил</li>
+	<li>Сыр</li>
+</ol>
+<!-- list -->
+
+
+
+
+
+<h2>Таблица</h2>
+<!-- table -->
+<table class="table">
+	<thead>
+		<th class="table__heading">Имя</th>
+		<th class="table__heading">Фамилия</th>
+		<th class="table__heading">Буква</th>
+	</thead>
+	<tr class="table__row">
+		<td class="table__content" data-heading="Фамилия">Шерлок</td>
+		<td class="table__content" data-heading="Имя">Холмс</td>
+		<td class="table__content" data-heading="Буква">A+</td>
+	</tr>
+	<tr class="table__row">
+		<td class="table__content" data-heading="Фамилия">Доктор</td>
+		<td class="table__content" data-heading="Имя">Ватсон</td>
+		<td class="table__content" data-heading="Буква">B-</td>
+	</tr>
+	<tr class="table__row">
+		<td class="table__content" data-heading="Фамилия">Профессор</td>
+		<td class="table__content" data-heading="Имя">Мориарти</td>
+		<td class="table__content" data-heading="Буква">C</td>
+	</tr>
+</table>
+<!-- table -->
+
+
+
+
+<h1>Заголовок h1</h1>
+<h2>Заголовки h2</h2>
+<h3>Заголовки h3</h3>
+
+
+
+</aside>
+
+
+
+
+
+<img src="https://farm9.staticflickr.com/8204/8164153458_17bd18fe44_o_d.jpg" alt="" data-action="zoom" class="padded">
+<figcaption>Если картинка не может ютиться в мелкой колонке, то её следует вынести за рамки блока aside. Чтобы она встала ровно, ей следует присвоить класс padded.</figcaption>
+
+
+
+
+<article>
+
+
+
+
+<section>
+	<span class="icon">❄︎</span>
+	<div class="with-side">
+		<p>Классный, жирный шрифтец так и прыгает в мозг читателя с экрана его компьютера. Ссылки в тексте <a href="#">вот такие</a> скромные, чтоб не отвлекали особо от чтения. Можно выделять <em>курсивом, всё будет выглядеть цельно.</em> Посмотрите на то, чем торгуют люди, пройдите по городу и досмотрите, что продается: наряды и предметы для объядения.  Они с полчаса как кончили работу, так что в этот день мы могли сидеть только пустые каморы.</p>
+	</div>
+</section>
+
+
+
+
+
+
+
+<style type="text/css">
+	.flex-in {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.flex-in div:first-child{
+	padding: 60px 60px 60px 0;
+}
+.flex-in p {
+	margin: 0;
+	padding: 0;
+}
+.flex-in figcaption {
+	width: 80%;
+}
+
+.flex-1 {
+-webkit-flex: 1 0 0;
+	 flex: 1 0 0;
+}
+.flex-2 {
+	-webkit-flex: 2 0 0;
+	 flex: 2 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+	.flex-in {
+		flex-direction: column;
+	}
+	.flex-in div:first-child{
+	padding: 0;
+	margin-bottom: 2rem;
+}
+}
+</style>
+
+<div class="flex-in">
+	<div class="flex-1">
+		<p>Turpis sed tempus integer erat, pellentesque tortor nisl, eros viverra, integer vehicula taciti sapien sed nisl dui, nec litora tincidunt cum non lobortis sollicitudin. Et odio duis cum magna pretium. Enim augue odio. Non nec velit sed lacus in. Enim vitae pellentesque nec phasellus, quis in vitae, leo in eros donec, pede volutpat. Donec nunc mi vel, quis malesuada, sed proin curabitur orci ipsum volutpat, eu eu id blandit ultricies sodales</p>
+	</div>
+	<div class="flex-2">
+		<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/blog/style-hero.jpg">
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+		
+	
+	<h2>Картинки</h2>
+
+
+		<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="" data-action="zoom">
+		<figcaption>Картинка без класса. Так же у неё есть длинное описание, которое показывает размеры блока текста.</figcaption>
+
+
+
+		
+	<section>
+
+
+			<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="" data-action="zoom">
+			<figcaption>Картинка с классом copy-width</figcaption>
+
+
+		<div class="gallery">
+			<figure><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt><figcaption>Шишел</figcaption></figure>
+			<figure><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt><figcaption>Мышел</figcaption></figure>
+			<figure><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt><figcaption>Вышел</figcaption></figure>
+		</div>
+
+		<div class="gallery">
+			<figure><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt><figcaption>Шишел</figcaption></figure>
+			<figure><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt><figcaption>Мышел</figcaption></figure>
+		</div>
+
+
+
+
+	</section>
+</article>
+
+<img src="/images/transparent-girl.png" class="normal center" style="max-width: 500px">
+	<article class="shadow">
+		<section>
+			<p>Этот неожиданный аргумент особенно понравился приказчику, и он издал одобрительный звук. Все в доме идет по-старому, но все в недоуменье и все вопросительно и укоризненно смотрят на меня, предполагая, что все это от меня. А во мне все та же борьба — злобы за то, что она меня мучает, и беспокойства за нее. Прожили одну зиму, и в другую зиму случилось еще следующее никому не заметное, кажущееся ничтожным обстоятельство, но такое, которое и произвело все то, что произошло. Она была нездорова, и мерзавцы не велели ей рожать и научили средству. Мне это было отвратительно. Я боролся против этого, но она с легкомысленным упорством настояла на своем, и я покорился; последнее оправдание свиной жизни — дети — было отнято, и жизнь стала еще гаже.
+			<span class="icon">&nbsp;</span>
+			</p>
+		</section>
+	</article>
+
+<span class="icon">&nbsp;</span>
+
+	<h3 class="padded">Класс</h3>
+
+
+		<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="">
+		<figcaption>подпись</figcaption>
+
+
+<!-- видео блок, нужно вызывать скрипт для ресайза -->
+	<div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+	<div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="64377100"></div>
+<!-- видео блок END -->
+
+<article>
+	<section><p>Печальная баллада</p></section>
+</article>
+
+		<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="">
+<header class="bgred"><div class="centerblock"><p>Cлушал и улыбался, желая запомнить для употребления сколько можно больше из умных разговоров. А мы были два ненавидящих друг друга колодника, связанных одной цепью, отравляющие жизнь друг другу и старающиеся не видать этого. Я еще не знал тогда, что 0,99 супружеств живут в таком же аду, как и я жил, и что это не может быть иначе. Тогда я еще не знал этого ни про других, ни про себя. Вот он-то с своей музыкой был причиной всего. Ведь на суде было представлено дело так, что все случилось из ревности. Ничуть не бывало, то есть не то, что ничуть не бывало, а то, да не то. На суде так и решено было, что я обманутый муж и что я убил, защищая свою п</p></div></header>
+
+<header class="bgsky"><div class="centerblock"><img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt=""><p class="txtblack">Абзац</p></div></header>
+
+
+
+
+<aside>
+
+		<span class="icon">. . .</span>
+		<p>Эта основная секция aside, она оборачивает блок section left. Она занимает примерно 50% ширины экрана на десктопах и чуть больше на мобильных устройствах. Текст заключен в абзац p. Он набран мощным и внятным шрифтом PT Serif, который я люблю.</p>
+
+			<img src="https://farm9.staticflickr.com/8252/8512332660_09414445ab_k_d.jpg" alt="" data-action="zoom">
+			<figcaption>Тут уже и картинка прилеплена. Она без класса. Так же у неё есть длинное описание, которое показывает размеры блока текста figcaption.</figcaption>
+
+
+</aside>
+
+<span class="icon">. . .</span>
+
+<article class="footer">
+  <div class="f-left">Последняя запись — 
+ 
+30
+октября
+  
+2019,
+ всего их 61. Jekyll 3.8.5.
+</div>
+<div>tg @antwon</div>
+</article>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="/static/index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+<!-- google counter -->
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26451647-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+<!-- end google counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(11453989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/11453989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,2770 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог</title>
+    <meta name="description" content="Картинки и тексты.">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://localhost:4000/blog/">
+    <link rel="alternate" type="application/rss+xml" title="Likewhoa" href="/feed.xml" />
+    <!-- google search console -->
+    <meta name="google-site-verification" content="FpxZXaSmPze2lNe7uty69AA9cZZT6meINY4n2VCDZCg" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css?201911051407" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Блог">
+    <meta property="og:description" content="Картинки и тексты.">
+    <meta property="og:url" content="http://localhost:4000/blog/">
+    <meta property="og:site_name" content="Likewhoa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Блог" />
+    <meta name="twitter:description" content="Картинки и тексты." />
+    <meta name="twitter:url" content="http://localhost:4000/blog/" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAo5ogjjko">
+    <link rel="shortcut icon" href="/favicon.ico?v=YAo5ogjjko">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="animated fadeIn">
+<article class="menu">	
+	<div class="bread">
+		<ol class="bread-list">
+			<li class="home">
+				<a href="/">
+					Index
+				</a>
+			</li>
+			
+			<li>Блог</li>
+		</ol>
+	</div>
+	<div>
+		<form class="search-container" action="https://www.google.com/search" method="GET">
+			<input id="search-box" type="text" class="search-box" name="q" />
+			<label for="search-box">
+				<span class="search-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9479 6.15909C11.9479 8.92051 9.70931 11.1591 6.94788 11.1591C4.18646 11.1591 1.94788 8.92051 1.94788 6.15909C1.94788 3.39766 4.18646 1.15909 6.94788 1.15909C9.70931 1.15909 11.9479 3.39766 11.9479 6.15909ZM10.8227 10.7402C9.77734 11.6254 8.42494 12.1591 6.94788 12.1591C3.63418 12.1591 0.947884 9.4728 0.947884 6.15909C0.947884 2.84538 3.63418 0.159088 6.94788 0.159088C10.2616 0.159088 12.9479 2.84538 12.9479 6.15909C12.9479 7.63574 12.4145 8.98779 11.5298 10.0331L16.7974 15.3007C16.9927 15.496 16.9927 15.8126 16.7974 16.0078C16.6022 16.2031 16.2856 16.2031 16.0903 16.0078L10.8227 10.7402Z">
+					</svg>
+				</span>
+			</label>
+			<input type="hidden" name="sitesearch" value="likewhoa.ru">
+		</form>
+	</div>
+
+		<!--
+		<div>
+			<a href="/feed.xml">
+				<span class="rss-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 10.6467C0.949764 10.3706 1.17362 10.1467 1.44976 10.1467C4.4867 10.1467 6.94862 12.6086 6.94862 15.6456C6.94862 15.9217 6.72477 16.1456 6.44862 16.1456C6.17248 16.1456 5.94862 15.9217 5.94862 15.6456C5.94862 13.1609 3.93442 11.1467 1.44976 11.1467C1.17362 11.1467 0.949764 10.9228 0.949764 10.6467Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 5.64784C0.949764 5.3717 1.17362 5.14784 1.44976 5.14784C7.24749 5.14784 11.9475 9.84783 11.9475 15.6456C11.9475 15.9217 11.7236 16.1456 11.4475 16.1456C11.1713 16.1456 10.9475 15.9217 10.9475 15.6456C10.9475 10.4001 6.69521 6.14784 1.44976 6.14784C1.17362 6.14784 0.949764 5.92398 0.949764 5.64784Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 0.648987C0.949764 0.372844 1.17362 0.148987 1.44976 0.148987C10.0083 0.148987 16.9463 7.08704 16.9463 15.6456C16.9463 15.9217 16.7225 16.1456 16.4463 16.1456C16.1702 16.1456 15.9463 15.9217 15.9463 15.6456C15.9463 7.63933 9.456 1.14899 1.44976 1.14899C1.17362 1.14899 0.949764 0.925129 0.949764 0.648987Z"/>
+						<path d="M2.97483 15.1367C2.97483 15.6954 2.52196 16.1482 1.96331 16.1482C1.40466 16.1482 0.95179 15.6954 0.95179 15.1367C0.95179 14.5781 1.40466 14.1252 1.96331 14.1252C2.52196 14.1252 2.97483 14.5781 2.97483 15.1367Z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		дальше можно просто добавлять иконки
+		<div>b2</div>
+		<div>b3</div>
+		<div>b4</div>
+		-->
+</article>
+<aside>
+  <h1>Блог</h1>
+
+
+
+
+    <a href="/tag/pov/" class="tagname">
+        
+POV <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/ИЛС/" class="tagname">
+        
+ИЛС <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/азарт/" class="tagname">
+        
+азарт <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/анализ/" class="tagname">
+        
+анализ <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/ардуино/" class="tagname">
+        
+ардуино <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/артефакты/" class="tagname">
+        
+артефакты <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/бизнес/" class="tagname">
+        
+бизнес <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/буддизм/" class="tagname">
+        
+буддизм <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/быт/" class="tagname">
+        
+быт <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/веб/" class="tagname">
+        
+веб <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/век-живи/" class="tagname">
+        
+век живи <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/вело/" class="tagname">
+        
+вело <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/визуализация/" class="tagname">
+        
+визуализация <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/винил/" class="tagname">
+        
+винил <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/глитч/" class="tagname">
+        
+глитч <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/голографические-проекторы/" class="tagname">
+        
+голографические проекторы <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/дабстеп/" class="tagname">
+        
+дабстеп <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/деньги/" class="tagname">
+        
+деньги <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/дети/" class="tagname">
+        
+дети <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/джекил/" class="tagname">
+        
+джекил <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/дизайн/" class="tagname">
+        
+дизайн <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/дочь/" class="tagname">
+        
+дочь <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/дураки/" class="tagname">
+        
+дураки <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/замки-и-шлюзы/" class="tagname">
+        
+замки и шлюзы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/зима/" class="tagname">
+        
+зима <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/изо/" class="tagname">
+        
+изо <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/инструменты/" class="tagname">
+        
+инструменты <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/интерактивные-столы/" class="tagname">
+        
+интерактивные столы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/интерфейсы/" class="tagname">
+        
+интерфейсы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/инфостены/" class="tagname">
+        
+инфостены <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/искусство/" class="tagname">
+        
+искусство <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/кабины/" class="tagname">
+        
+кабины <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/камеры/" class="tagname">
+        
+камеры <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/карты/" class="tagname">
+        
+карты <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/киберпанк/" class="tagname">
+        
+киберпанк <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/кино/" class="tagname">
+        
+кино <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/конкуренция/" class="tagname">
+        
+конкуренция <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/культура/" class="tagname">
+        
+культура <span class="number">4</span>
+
+    
+    <span data-number="4"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/лайфстайл/" class="tagname">
+        
+лайфстайл <span class="number">9</span>
+
+    
+    <span data-number="9"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/лекция/" class="tagname">
+        
+лекция <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/локаторы/" class="tagname">
+        
+локаторы <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/людвиг/" class="tagname">
+        
+людвиг <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/мак/" class="tagname">
+        
+мак <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/математика/" class="tagname">
+        
+математика <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/медиапанели/" class="tagname">
+        
+медиапанели <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/месячные/" class="tagname">
+        
+месячные <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/микс/" class="tagname">
+        
+микс <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/мода/" class="tagname">
+        
+мода <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/модули/" class="tagname">
+        
+модули <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/монитор/" class="tagname">
+        
+монитор <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/моном/" class="tagname">
+        
+моном <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/музыка/" class="tagname">
+        
+музыка <span class="number">16</span>
+
+    
+    <span data-number="16"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/наука/" class="tagname">
+        
+наука <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/новый-год/" class="tagname">
+        
+новый год <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/нойз/" class="tagname">
+        
+нойз <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/ноут/" class="tagname">
+        
+ноут <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/отношение/" class="tagname">
+        
+отношение <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/отчет/" class="tagname">
+        
+отчет <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/офлайн/" class="tagname">
+        
+офлайн <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/память/" class="tagname">
+        
+память <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/панк/" class="tagname">
+        
+панк <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/питер/" class="tagname">
+        
+питер <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/планшеты/" class="tagname">
+        
+планшеты <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/планы/" class="tagname">
+        
+планы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/плеер/" class="tagname">
+        
+плеер <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/полиграфия/" class="tagname">
+        
+полиграфия <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/помехи/" class="tagname">
+        
+помехи <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/прицелы/" class="tagname">
+        
+прицелы <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/программы/" class="tagname">
+        
+программы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/прогресс-бары/" class="tagname">
+        
+прогресс бары <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/птицы/" class="tagname">
+        
+птицы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/путешествие/" class="tagname">
+        
+путешествие <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/работа/" class="tagname">
+        
+работа <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/радары/" class="tagname">
+        
+радары <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/радио/" class="tagname">
+        
+радио <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/радиоэлектроника/" class="tagname">
+        
+радиоэлектроника <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/режим-дня/" class="tagname">
+        
+режим дня <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/религия/" class="tagname">
+        
+религия <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/сайт/" class="tagname">
+        
+сайт <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/самолеты/" class="tagname">
+        
+самолеты <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/сетки/" class="tagname">
+        
+сетки <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/сигналы-тревоги/" class="tagname">
+        
+сигналы тревоги <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/синицы/" class="tagname">
+        
+синицы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/синтез/" class="tagname">
+        
+синтез <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/сканеры/" class="tagname">
+        
+сканеры <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/статический-генератор/" class="tagname">
+        
+статический генератор <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/схемы/" class="tagname">
+        
+схемы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/таиланд/" class="tagname">
+        
+таиланд <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/таймеры/" class="tagname">
+        
+таймеры <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/теория/" class="tagname">
+        
+теория <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/теория-вероятности/" class="tagname">
+        
+теория вероятности <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/техно/" class="tagname">
+        
+техно <span class="number">3</span>
+
+    
+    <span data-number="3"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/установка-личности/" class="tagname">
+        
+установка личности <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/философия/" class="tagname">
+        
+философия <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/фото/" class="tagname">
+        
+фото <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/фотошоп/" class="tagname">
+        
+фотошоп <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/фракталы/" class="tagname">
+        
+фракталы <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/хаус/" class="tagname">
+        
+хаус <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/хипстеры/" class="tagname">
+        
+хипстеры <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/хроника/" class="tagname">
+        
+хроника <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/цвет/" class="tagname">
+        
+цвет <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/целеуказатели/" class="tagname">
+        
+целеуказатели <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/шкалы/" class="tagname">
+        
+шкалы <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/шоубизнес/" class="tagname">
+        
+шоубизнес <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/экран/" class="tagname">
+        
+экран <span class="number">1</span>
+
+    
+    <span data-number="1"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/эксперимент/" class="tagname">
+        
+эксперимент <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+    <a href="/tag/электронные-бинокли/" class="tagname">
+        
+электронные бинокли <span class="number">2</span>
+
+    
+    <span data-number="2"></span>
+
+
+
+    </a>
+
+
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!--
+    <script>
+      $(document).ready(function(){
+        $('.chart').horizBarChart({
+          selector: '.bar',
+          speed: 3000
+        });
+      });
+    </script>
+<style type="text/css">
+
+
+
+
+.chart .barwrp {
+    display: block;
+    height: 1px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    position: relative
+}
+
+.chart .barwrp .bar {
+    display: block;
+    background: #1663c7;
+    opacity: .5;
+    height: 100%
+}
+
+.chart .number {
+    color: red;
+    font-size: 8px;
+    padding-left: 5px;
+    top: -2px
+}
+.chart a:link{
+    border:0;
+
+}
+.tagname {
+    margin-bottom: 30px;
+}
+</style>
+
+
+
+<div class="chart">
+
+
+    <a href="/tag/pov/" class="tagname">
+        
+POV <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/ИЛС/" class="tagname">
+        
+ИЛС <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/азарт/" class="tagname">
+        
+азарт <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/анализ/" class="tagname">
+        
+анализ <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/ардуино/" class="tagname">
+        
+ардуино <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/артефакты/" class="tagname">
+        
+артефакты <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/бизнес/" class="tagname">
+        
+бизнес <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/буддизм/" class="tagname">
+        
+буддизм <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/быт/" class="tagname">
+        
+быт <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/веб/" class="tagname">
+        
+веб <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/век-живи/" class="tagname">
+        
+век живи <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/вело/" class="tagname">
+        
+вело <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/визуализация/" class="tagname">
+        
+визуализация <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/винил/" class="tagname">
+        
+винил <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/глитч/" class="tagname">
+        
+глитч <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/голографические-проекторы/" class="tagname">
+        
+голографические проекторы <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/дабстеп/" class="tagname">
+        
+дабстеп <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/деньги/" class="tagname">
+        
+деньги <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/дети/" class="tagname">
+        
+дети <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/джекил/" class="tagname">
+        
+джекил <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/дизайн/" class="tagname">
+        
+дизайн <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/дочь/" class="tagname">
+        
+дочь <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/дураки/" class="tagname">
+        
+дураки <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/замки-и-шлюзы/" class="tagname">
+        
+замки и шлюзы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/зима/" class="tagname">
+        
+зима <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/изо/" class="tagname">
+        
+изо <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/инструменты/" class="tagname">
+        
+инструменты <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/интерактивные-столы/" class="tagname">
+        
+интерактивные столы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/интерфейсы/" class="tagname">
+        
+интерфейсы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/инфостены/" class="tagname">
+        
+инфостены <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/искусство/" class="tagname">
+        
+искусство <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/кабины/" class="tagname">
+        
+кабины <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/камеры/" class="tagname">
+        
+камеры <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/карты/" class="tagname">
+        
+карты <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/киберпанк/" class="tagname">
+        
+киберпанк <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/кино/" class="tagname">
+        
+кино <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/конкуренция/" class="tagname">
+        
+конкуренция <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/культура/" class="tagname">
+        
+культура <span class="number">4</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="4"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/лайфстайл/" class="tagname">
+        
+лайфстайл <span class="number">9</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="9"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/лекция/" class="tagname">
+        
+лекция <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/локаторы/" class="tagname">
+        
+локаторы <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/людвиг/" class="tagname">
+        
+людвиг <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/мак/" class="tagname">
+        
+мак <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/математика/" class="tagname">
+        
+математика <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/медиапанели/" class="tagname">
+        
+медиапанели <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/месячные/" class="tagname">
+        
+месячные <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/микс/" class="tagname">
+        
+микс <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/мода/" class="tagname">
+        
+мода <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/модули/" class="tagname">
+        
+модули <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/монитор/" class="tagname">
+        
+монитор <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/моном/" class="tagname">
+        
+моном <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/музыка/" class="tagname">
+        
+музыка <span class="number">16</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="16"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/наука/" class="tagname">
+        
+наука <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/новый-год/" class="tagname">
+        
+новый год <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/нойз/" class="tagname">
+        
+нойз <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/ноут/" class="tagname">
+        
+ноут <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/отношение/" class="tagname">
+        
+отношение <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/отчет/" class="tagname">
+        
+отчет <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/офлайн/" class="tagname">
+        
+офлайн <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/память/" class="tagname">
+        
+память <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/панк/" class="tagname">
+        
+панк <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/питер/" class="tagname">
+        
+питер <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/планшеты/" class="tagname">
+        
+планшеты <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/планы/" class="tagname">
+        
+планы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/плеер/" class="tagname">
+        
+плеер <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/полиграфия/" class="tagname">
+        
+полиграфия <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/помехи/" class="tagname">
+        
+помехи <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/прицелы/" class="tagname">
+        
+прицелы <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/программы/" class="tagname">
+        
+программы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/прогресс-бары/" class="tagname">
+        
+прогресс бары <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/птицы/" class="tagname">
+        
+птицы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/путешествие/" class="tagname">
+        
+путешествие <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/работа/" class="tagname">
+        
+работа <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/радары/" class="tagname">
+        
+радары <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/радио/" class="tagname">
+        
+радио <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/радиоэлектроника/" class="tagname">
+        
+радиоэлектроника <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/режим-дня/" class="tagname">
+        
+режим дня <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/религия/" class="tagname">
+        
+религия <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/сайт/" class="tagname">
+        
+сайт <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/самолеты/" class="tagname">
+        
+самолеты <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/сетки/" class="tagname">
+        
+сетки <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/сигналы-тревоги/" class="tagname">
+        
+сигналы тревоги <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/синицы/" class="tagname">
+        
+синицы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/синтез/" class="tagname">
+        
+синтез <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/сканеры/" class="tagname">
+        
+сканеры <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/статический-генератор/" class="tagname">
+        
+статический генератор <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/схемы/" class="tagname">
+        
+схемы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/таиланд/" class="tagname">
+        
+таиланд <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/таймеры/" class="tagname">
+        
+таймеры <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/теория/" class="tagname">
+        
+теория <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/теория-вероятности/" class="tagname">
+        
+теория вероятности <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/техно/" class="tagname">
+        
+техно <span class="number">3</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="3"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/установка-личности/" class="tagname">
+        
+установка личности <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/философия/" class="tagname">
+        
+философия <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/фото/" class="tagname">
+        
+фото <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/фотошоп/" class="tagname">
+        
+фотошоп <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/фракталы/" class="tagname">
+        
+фракталы <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/хаус/" class="tagname">
+        
+хаус <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/хипстеры/" class="tagname">
+        
+хипстеры <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/хроника/" class="tagname">
+        
+хроника <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/цвет/" class="tagname">
+        
+цвет <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/целеуказатели/" class="tagname">
+        
+целеуказатели <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/шкалы/" class="tagname">
+        
+шкалы <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/шоубизнес/" class="tagname">
+        
+шоубизнес <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/экран/" class="tagname">
+        
+экран <span class="number">1</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="1"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/эксперимент/" class="tagname">
+        
+эксперимент <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+    <a href="/tag/электронные-бинокли/" class="tagname">
+        
+электронные бинокли <span class="number">2</span>
+<div class="barwrp">
+    
+    <span class="bar" data-number="2"></span>
+    
+</div>
+
+    </a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">!function(a){"use strict";a.fn.horizBarChart=function(b){var c=a.extend({selector:".bar",speed:3e3},b);return this.each(function(){var b=0;a(this).find(a(c.selector)).each(function(){var c=a(this).data("number");c>b&&(b=c)}),a(this).find(a(c.selector)).each(function(){var d=a(this),e=d.data("number"),f=Math.round(e/b*100)+"%";a(this).animate({width:f},c.speed),a(this).next(".number").animate({left:f},c.speed)})})}}(jQuery);</script>
+
+
+-->
+
+<article class="footer">
+  <div class="f-left">Последняя запись — 
+ 
+30
+октября
+  
+2019,
+ всего их 61. Jekyll 3.8.5.
+</div>
+<div>tg @antwon</div>
+</article>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="/static/index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+<!-- google counter -->
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26451647-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+<!-- end google counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(11453989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/11453989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>

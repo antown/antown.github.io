@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post by Category</title>
+    <meta name="description" content="Картинки и тексты.">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://localhost:4000/arc/">
+    <link rel="alternate" type="application/rss+xml" title="Likewhoa" href="/feed.xml" />
+    <!-- google search console -->
+    <meta name="google-site-verification" content="FpxZXaSmPze2lNe7uty69AA9cZZT6meINY4n2VCDZCg" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css?201911051407" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Post by Category">
+    <meta property="og:description" content="Картинки и тексты.">
+    <meta property="og:url" content="http://localhost:4000/arc/">
+    <meta property="og:site_name" content="Likewhoa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Post by Category" />
+    <meta name="twitter:description" content="Картинки и тексты." />
+    <meta name="twitter:url" content="http://localhost:4000/arc/" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAo5ogjjko">
+    <link rel="shortcut icon" href="/favicon.ico?v=YAo5ogjjko">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="animated fadeIn">
+<article class="menu">	
+	<div class="bread">
+		<ol class="bread-list">
+			<li class="home">
+				<a href="/">
+					Index
+				</a>
+			</li>
+			
+			<li>Post by Category</li>
+		</ol>
+	</div>
+	<div>
+		<form class="search-container" action="https://www.google.com/search" method="GET">
+			<input id="search-box" type="text" class="search-box" name="q" />
+			<label for="search-box">
+				<span class="search-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9479 6.15909C11.9479 8.92051 9.70931 11.1591 6.94788 11.1591C4.18646 11.1591 1.94788 8.92051 1.94788 6.15909C1.94788 3.39766 4.18646 1.15909 6.94788 1.15909C9.70931 1.15909 11.9479 3.39766 11.9479 6.15909ZM10.8227 10.7402C9.77734 11.6254 8.42494 12.1591 6.94788 12.1591C3.63418 12.1591 0.947884 9.4728 0.947884 6.15909C0.947884 2.84538 3.63418 0.159088 6.94788 0.159088C10.2616 0.159088 12.9479 2.84538 12.9479 6.15909C12.9479 7.63574 12.4145 8.98779 11.5298 10.0331L16.7974 15.3007C16.9927 15.496 16.9927 15.8126 16.7974 16.0078C16.6022 16.2031 16.2856 16.2031 16.0903 16.0078L10.8227 10.7402Z">
+					</svg>
+				</span>
+			</label>
+			<input type="hidden" name="sitesearch" value="likewhoa.ru">
+		</form>
+	</div>
+
+		<!--
+		<div>
+			<a href="/feed.xml">
+				<span class="rss-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 10.6467C0.949764 10.3706 1.17362 10.1467 1.44976 10.1467C4.4867 10.1467 6.94862 12.6086 6.94862 15.6456C6.94862 15.9217 6.72477 16.1456 6.44862 16.1456C6.17248 16.1456 5.94862 15.9217 5.94862 15.6456C5.94862 13.1609 3.93442 11.1467 1.44976 11.1467C1.17362 11.1467 0.949764 10.9228 0.949764 10.6467Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 5.64784C0.949764 5.3717 1.17362 5.14784 1.44976 5.14784C7.24749 5.14784 11.9475 9.84783 11.9475 15.6456C11.9475 15.9217 11.7236 16.1456 11.4475 16.1456C11.1713 16.1456 10.9475 15.9217 10.9475 15.6456C10.9475 10.4001 6.69521 6.14784 1.44976 6.14784C1.17362 6.14784 0.949764 5.92398 0.949764 5.64784Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 0.648987C0.949764 0.372844 1.17362 0.148987 1.44976 0.148987C10.0083 0.148987 16.9463 7.08704 16.9463 15.6456C16.9463 15.9217 16.7225 16.1456 16.4463 16.1456C16.1702 16.1456 15.9463 15.9217 15.9463 15.6456C15.9463 7.63933 9.456 1.14899 1.44976 1.14899C1.17362 1.14899 0.949764 0.925129 0.949764 0.648987Z"/>
+						<path d="M2.97483 15.1367C2.97483 15.6954 2.52196 16.1482 1.96331 16.1482C1.40466 16.1482 0.95179 15.6954 0.95179 15.1367C0.95179 14.5781 1.40466 14.1252 1.96331 14.1252C2.52196 14.1252 2.97483 14.5781 2.97483 15.1367Z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		дальше можно просто добавлять иконки
+		<div>b2</div>
+		<div>b3</div>
+		<div>b4</div>
+		-->
+</article>
+<aside>
+    
+    
+     <span class="site-tag">
+        <a href="#blog">
+                Blog (55)
+        </a>
+    </span>&nbsp;
+    
+     <span class="site-tag">
+        <a href="#txt">
+                txt (3)
+        </a>
+    </span>&nbsp;
+    
+     <span class="site-tag">
+        <a href="#ui">
+                ui (3)
+        </a>
+    </span>&nbsp;
+    
+    </aside>
+
+
+    <div id="index">
+
+    
+    <a name="Blog"></a><h2>Blog (55) </h2>
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/01/09/1/" title="Arduinome">Arduinome <p class="date">January  9, 2012</p></a></h3>
+       <p>Большая инструкция по постройке Arduinome — клона Monome</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/bassxchill/" title="Bass × Chill">Bass × Chill <p class="date">February 22, 2015</p></a></h3>
+       <p></p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/burial-street-halo/" title="Burial — Street Halo">Burial — Street Halo <p class="date">January 30, 2012</p></a></h3>
+       <p>Миниобзор на последнюю пластинку Burial — Street Halo.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/china-southern-airlines/" title="China Southern airlines">China Southern airlines <p class="date">February 21, 2014</p></a></h3>
+       <p>Перелёт из Таиланда в Россию с двойной пересадкой в Китае.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/02/09/1/" title="Ekoplekz">Ekoplekz <p class="date">February  9, 2012</p></a></h3>
+       <p>Обзор творчества олдскульного во всех смыслах экспериментатора.</p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/i-am-the-law/" title="I Am The Law">I Am The Law <p class="date">September 27, 2012</p></a></h3>
+       <p>Небольшая рецензия и личные впечатления от фильма Судья Дред.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/japanese-hurricane/" title="Japanese Hurricane">Japanese Hurricane <p class="date">November 20, 2012</p></a></h3>
+       <p>Нанообзор Shinichi Osawa.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/mars-attacks/" title="Mars Attacks!">Mars Attacks! <p class="date">April 13, 2012</p></a></h3>
+       <p>Эксперимент со средствами массовой информации и доверие людей к нему.</p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/offline/" title="Offline Is The New Black">Offline Is The New Black <p class="date">April  1, 2019</p></a></h3>
+       <p>Offline Is The New Black</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/only-91/" title="Only 91’s">Only 91’s <p class="date">April 18, 2012</p></a></h3>
+       <p>Когда трава была зеленее, а бас — глубже.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/pulse-8-rec/" title="Pulse-8 Records">Pulse-8 Records <p class="date">April 27, 2012</p></a></h3>
+       <p>Миниобзор лейбла.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/galaxy-2-galaxy/" title="Retrospective — Galaxy 2 Galaxy">Retrospective — Galaxy 2 Galaxy <p class="date">April 11, 2012</p></a></h3>
+       <p>Миниобзор.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/robotic-spielt-gute-musik/" title="Robotic spielt gute Musik">Robotic spielt gute Musik <p class="date">December  1, 2012</p></a></h3>
+       <p>Нанообзор Anthony Rother — Dualis.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/thailand-living/" title="Thailand living">Thailand living <p class="date">November 27, 2012</p></a></h3>
+       <p>Небольшой итог трехмесячного проживания в таиланде. Опыт первой длительной поездки.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/ui-section/" title="UI section open">UI section open <p class="date">September 12, 2019</p></a></h3>
+       <p></p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/ui-ux/" title="UI/UX">UI/UX <p class="date">February 11, 2016</p></a></h3>
+       <p></p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/annual-report/" title="Годовые отчеты">Годовые отчеты <p class="date">February 13, 2012</p></a></h3>
+       <p>Годовые финансовые отчеты — эта одна из норм ведения бизнеса, перенятая нами у западных компаний, но, к сожалению, пока еще не настолько распространенная.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/horizon/" title="Горизонт видения будущего">Горизонт видения будущего <p class="date">March 24, 2012</p></a></h3>
+       <p>Горизонт видения будущего. «Баллансирование на краю хаоса как способ творческого обновления» из сборника «Синергетическая парадигма 2003. Человек и общество ...</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/02/16/1/" title="Дабстеп">Дабстеп <p class="date">February 16, 2012</p></a></h3>
+       <p>Кратчайшая история стиля dubstep и субъективное отношение.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/arduinome-parts/" title="Детали для Arduinome">Детали для Arduinome <p class="date">January  9, 2012</p></a></h3>
+       <p>Список деталей для покупки при постройке Arduinome.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/detroit-techno/" title="Детройтское техно">Детройтское техно <p class="date">February 14, 2012</p></a></h3>
+       <p>Кратчайшая история детройтского техно.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/rnb/" title="Из истории стилей">Из истории стилей <p class="date">March 23, 2012</p></a></h3>
+       <p>Как просто появляются стили музыки.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/implicitnaya-pamyat/" title="Имплицитная память">Имплицитная память <p class="date">December 23, 2012</p></a></h3>
+       <p>Каждый раз после стрижки</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/02/22/1/" title="Интерактивная визуализация Первой Прелюдии Баха">Интерактивная визуализация Первой Прелюдии Баха <p class="date">February 22, 2012</p></a></h3>
+       <p>Визуализация первой Прелюдии из Сюиты для виолончели Баха. Что если поменять местами отображение нот и струн, описывая формулами длину и высоту ноты.</p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/arts/" title="Искусствоведение">Искусствоведение <p class="date">February  1, 2012</p></a></h3>
+       <p>Есть огромное количество людей, ратующих за «классическое» искусство в противовес современному, хотя, оно уже сто лет как современное. Пробую выяснить, что ж...</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/02/25/1/" title="Йозеф Бойс">Йозеф Бойс <p class="date">February 25, 2012</p></a></h3>
+       <p>История и анализ творчества и протеста Йозефа Бойса.</p>
+
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/vek-zhivi/" title="Как нагревают воду">Как нагревают воду <p class="date">July 12, 2012</p></a></h3>
+       <p>Устройство системы нагрева воды в домах. Тепловые пункты.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/kak-poschitat-kolichestvo-sloev-v-fotoshope/" title="Как посчитать количество слоев в фотошопе">Как посчитать количество слоев в фотошопе <p class="date">January 29, 2013</p></a></h3>
+       <p>Как посчитать количество слоев в фотошопе.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/kidsspace/" title="Кидс Спэйс">Кидс Спэйс <p class="date">December 24, 2011</p></a></h3>
+       <p>Первый контакт с Константиновым.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/konkurenciya/" title="Конкуренция">Конкуренция <p class="date">October  8, 2014</p></a></h3>
+       <p>На тему разного подхода к сервису у нас и в других странах, в частности, в Европе и США.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/mar-2018/" title="Март 2018 — первый кастом">Март 2018 — первый кастом <p class="date">March 31, 2018</p></a></h3>
+       <p>Как я заказывал кастомную раму у Lis Bikes</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/na-blago-vseh-zhivyh/" title="На благо всех живых">На благо всех живых <p class="date">November 21, 2012</p></a></h3>
+       <p>Отношение к современному буддизму.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/dunno/" title="Не читал, но осуждаю">Не читал, но осуждаю <p class="date">December 27, 2011</p></a></h3>
+       <p>Как легко начать думать, что ты умнее других.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/nu-da-poprobovali-s/" title="Ну да, попробовали-с">Ну да, попробовали-с <p class="date">December  9, 2012</p></a></h3>
+       <p>Отзыв про Manga Studio.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/2012/02/21/1/" title="Онлайн рисовалки">Онлайн рисовалки <p class="date">February 21, 2012</p></a></h3>
+       <p>Онлайн рисовалки. На самом деле я ими не пользуюсь, но почему-то на страницу ежедневно приходят сотни человек.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/punk-culture/" title="Панк-культура">Панк-культура <p class="date">January 22, 2012</p></a></h3>
+       <p>Этот стиль музыки и жизни вызывает ожесточённые споры и по сей день. Одни считают, что это — бунт против общества, другие видят в нём развлечение, третьим эт...</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/personal-music/" title="Персональная музыка">Персональная музыка <p class="date">February  5, 2012</p></a></h3>
+       <p>Музыка может изменить вас, она может изменить и мир вокруг вас.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/p10/" title="Прошитый горизонт">Прошитый горизонт <p class="date">February 20, 2017</p></a></h3>
+       <p>Арт-центр на Пушкинской 10. Прошитый горизонт Никифорова.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/music-tendencies/" title="Прошлое десятилетие в музыке">Прошлое десятилетие в музыке <p class="date">January 25, 2012</p></a></h3>
+       <p>Куда подевались все гении?</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/razmer-ekrana/" title="Размер экрана">Размер экрана <p class="date">October  7, 2014</p></a></h3>
+       <p>Как я перешел с 27″ экрана на 15″ и ни разу не пожалел.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/schedule/" title="Распорядок дня">Распорядок дня <p class="date">January 12, 2012</p></a></h3>
+       <p>Перые робкие шажки к самодисциплине.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/sinicy/" title="Синицы">Синицы <p class="date">November 27, 2012</p></a></h3>
+       <p>Прилетели, а я их сфоткал.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/hipster/" title="Словообразование">Словообразование <p class="date">March 23, 2012</p></a></h3>
+       <p>История термина.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/on-the-road-again/" title="Снова в бой">Снова в бой <p class="date">January 12, 2012</p></a></h3>
+       <p>Уютный дневничек.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/modern-reflex/" title="Современные рефлексы">Современные рефлексы <p class="date">January 29, 2012</p></a></h3>
+       <p>Приложение понятия условного рефлекса к чуду техники — телевизору. Попытка понять, какие рефлексы должны бы появиться у современного человека, проводящего у ...</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/going-static/" title="Статическая перезагрузка сайта">Статическая перезагрузка сайта <p class="date">March  6, 2016</p></a></h3>
+       <p>Как и зачем я перенес свой сайт на Jekyll.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/teodiceya/" title="Теодицея">Теодицея <p class="date">February  4, 2013</p></a></h3>
+       <p>Известный христианский парадокс о свободе воли и всеведении бога.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/theory-of-chances/" title="Теория вероятностей">Теория вероятностей <p class="date">February 17, 2012</p></a></h3>
+       <p>Теория о том, как появилась теория.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/feb-2018/" title="Февраль 2018 — Три биллборда на границе Эббинга, Миссури. Телефон. Покрышки.">Февраль 2018 — Три биллборда на границе Эббинга, Миссури. Телефон. Покрышки. <p class="date">February  2, 2018</p></a></h3>
+       <p>Три биллборда на границе Эббинга, Миссури. Телефон. Покрышки.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/fractal-synthesis/" title="Фрактальный синтез">Фрактальный синтез <p class="date">February 27, 2012</p></a></h3>
+       <p>У нас как-то принято считать, что визуальное реалистично, а музыкальное абстрактно, поэтому фрактальные алгоритмы в музыке, которыми еще недавно многие очень...</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/hipsters/" title="Хипстеры">Хипстеры <p class="date">February  2, 2012</p></a></h3>
+       <p>История развития субкультуры.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/color-perception/" title="Цветовосприятие">Цветовосприятие <p class="date">April 11, 2012</p></a></h3>
+       <p>Объективность оценки факторов цвета.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/mouse/" title="Что такое «мышка»?">Что такое «мышка»? <p class="date">December 20, 2011</p></a></h3>
+       <p>Как быстро устаревают технологии.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/new-state-of-arts/" title="Эскиз новой эстетики искусства">Эскиз новой эстетики искусства <p class="date">February 18, 2012</p></a></h3>
+       <p>Бузони писал этот трактат о музыке, но идея остается верна касательно любого авангардного вида искусства.</p>
+
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/blog/jan-2018/" title="Январь 2018 — зима, дочь, новая пластинка">Январь 2018 — зима, дочь, новая пластинка <p class="date">January 31, 2018</p></a></h3>
+       <p>Зима, дочь, новая пластинка.</p>
+
+    
+    
+
+    
+    <a name="txt"></a><h2>txt (3) </h2>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/txt/prisoners/" title="Визуальное повествование Пленниц">Визуальное повествование Пленниц <p class="date">February 11, 2017</p></a></h3>
+       <p>Анализ фильма Пленницы. Язык визуального повествования Роджера Дикинса.</p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/txt/interest/" title="Интерес и важность">Интерес и важность <p class="date">January 23, 2016</p></a></h3>
+       <p>Конспект лекции Людвига Быстроновского «Интерес и важность».</p>
+
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/txt/map-grow/" title="Как картографы выращивают горы на бумаге и экране">Как картографы выращивают горы на бумаге и экране <p class="date">February 14, 2018</p></a></h3>
+       <p>Анализ фильма Пленницы. Язык визуального повествования Роджера Дикинса.</p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <a name="ui"></a><h2>ui (3) </h2>
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/ui/bladerunner2049/" title="Blade Runner 2049">Blade Runner 2049 <p class="date">September 12, 2019</p></a></h3>
+       <p></p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/ui/iammother/" title="I Am Mother">I Am Mother <p class="date">October 30, 2019</p></a></h3>
+       <p></p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+      <h3><a href="http://localhost:4000/ui/oblivion/" title="Oblivion">Oblivion <p class="date">October  1, 2019</p></a></h3>
+       <p></p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    </div>
+
+<article class="footer">
+  <div class="f-left">Последняя запись — 
+ 
+30
+октября
+  
+2019,
+ всего их 61. Jekyll 3.8.5.
+</div>
+<div>tg @antwon</div>
+</article>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="/static/index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+<!-- google counter -->
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26451647-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+<!-- end google counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(11453989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/11453989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>

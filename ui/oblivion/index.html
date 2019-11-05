@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oblivion</title>
+    <meta name="description" content="Картинки и тексты.">
+    <meta name="keywords" content="сетки, модули, помехи, сигналы тревоги, электронные бинокли, кабины, ИЛС, прицелы, POV, радиоэлектроника, карты, схемы, планы, шкалы, локаторы, радары, интерактивные столы, инфостены">
+    <link rel="canonical" href="http://localhost:4000/ui/oblivion/">
+    <link rel="alternate" type="application/rss+xml" title="Likewhoa" href="/feed.xml" />
+    <!-- google search console -->
+    <meta name="google-site-verification" content="FpxZXaSmPze2lNe7uty69AA9cZZT6meINY4n2VCDZCg" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/style.css?201911051407" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Oblivion">
+    <meta property="og:description" content="Картинки и тексты.">
+    <meta property="og:url" content="http://localhost:4000/ui/oblivion/">
+    <meta property="og:site_name" content="Likewhoa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Oblivion" />
+    <meta name="twitter:description" content="Картинки и тексты." />
+    <meta name="twitter:url" content="http://localhost:4000/ui/oblivion/" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=YAo5ogjjko">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=YAo5ogjjko">
+    <link rel="shortcut icon" href="/favicon.ico?v=YAo5ogjjko">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="animated fadeIn">
+	<div style="background-color: #E7E7E7; height: 5px; position: absolute; top: 0" class="padded">&nbsp;</div>
+
+<style type="text/css">
+	.dark:before {
+		background-color:#0E0E17;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+	}
+</style>
+<div class="dark">
+<article class="menu menu-light">	
+	<div class="bread">
+		<ol class="bread-list">
+			<li class="home">
+				<a href="/">
+					Index
+				</a>
+			</li>
+			<li><a href="/ui/">ui</a></li>
+			<li>Oblivion</li>
+		</ol>
+	</div>
+	<div>
+		<form class="search-container" action="https://www.google.com/search" method="GET">
+			<input id="search-box" type="text" class="search-box" name="q" />
+			<label for="search-box">
+				<span class="search-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9479 6.15909C11.9479 8.92051 9.70931 11.1591 6.94788 11.1591C4.18646 11.1591 1.94788 8.92051 1.94788 6.15909C1.94788 3.39766 4.18646 1.15909 6.94788 1.15909C9.70931 1.15909 11.9479 3.39766 11.9479 6.15909ZM10.8227 10.7402C9.77734 11.6254 8.42494 12.1591 6.94788 12.1591C3.63418 12.1591 0.947884 9.4728 0.947884 6.15909C0.947884 2.84538 3.63418 0.159088 6.94788 0.159088C10.2616 0.159088 12.9479 2.84538 12.9479 6.15909C12.9479 7.63574 12.4145 8.98779 11.5298 10.0331L16.7974 15.3007C16.9927 15.496 16.9927 15.8126 16.7974 16.0078C16.6022 16.2031 16.2856 16.2031 16.0903 16.0078L10.8227 10.7402Z">
+					</svg>
+				</span>
+			</label>
+			<input type="hidden" name="sitesearch" value="likewhoa.ru">
+		</form>
+	</div>
+
+		<!--
+		<div>
+			<a href="/feed.xml">
+				<span class="rss-icon">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 10.6467C0.949764 10.3706 1.17362 10.1467 1.44976 10.1467C4.4867 10.1467 6.94862 12.6086 6.94862 15.6456C6.94862 15.9217 6.72477 16.1456 6.44862 16.1456C6.17248 16.1456 5.94862 15.9217 5.94862 15.6456C5.94862 13.1609 3.93442 11.1467 1.44976 11.1467C1.17362 11.1467 0.949764 10.9228 0.949764 10.6467Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 5.64784C0.949764 5.3717 1.17362 5.14784 1.44976 5.14784C7.24749 5.14784 11.9475 9.84783 11.9475 15.6456C11.9475 15.9217 11.7236 16.1456 11.4475 16.1456C11.1713 16.1456 10.9475 15.9217 10.9475 15.6456C10.9475 10.4001 6.69521 6.14784 1.44976 6.14784C1.17362 6.14784 0.949764 5.92398 0.949764 5.64784Z"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.949764 0.648987C0.949764 0.372844 1.17362 0.148987 1.44976 0.148987C10.0083 0.148987 16.9463 7.08704 16.9463 15.6456C16.9463 15.9217 16.7225 16.1456 16.4463 16.1456C16.1702 16.1456 15.9463 15.9217 15.9463 15.6456C15.9463 7.63933 9.456 1.14899 1.44976 1.14899C1.17362 1.14899 0.949764 0.925129 0.949764 0.648987Z"/>
+						<path d="M2.97483 15.1367C2.97483 15.6954 2.52196 16.1482 1.96331 16.1482C1.40466 16.1482 0.95179 15.6954 0.95179 15.1367C0.95179 14.5781 1.40466 14.1252 1.96331 14.1252C2.52196 14.1252 2.97483 14.5781 2.97483 15.1367Z"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		дальше можно просто добавлять иконки
+		<div>b2</div>
+		<div>b3</div>
+		<div>b4</div>
+		-->
+</article>
+<aside>	
+	<h1>Oblivion</h1>
+		<p>Тонкие, острые линии, чистые композиции. Интерфейсы футуристичны, но правдоподобны. У них хороший баланс между тем, что кажется знакомым, но в то же время немного чужим. Похоже на систему, которая совершенствовалась и развивалась на протяжении многих лет и ушла достаточно далеко от того, что мы знаем сегодня. Поэтому я не думаю, что на самом деле мы должны понимать все знаки и экраны, но должны распознавать некоторые знакомые элементы.</p>
+		<p>За проектированием следил <a href="https://gmunk.com/">gmunk</a>.</p>
+	</aside>
+	<article>
+		<div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="64377100"></div>
+	</article>
+
+<aside>
+	<div class="icon">&nbsp;</div>
+	<p>Ритм большинства интерфейсов задает сетка из точек. Она структурирует всю систему: упорядочивает и рифмует большие карты с окружающими виджетами, заполняет пустоту на радарах. При этом сетка хорошо заметна, она не спорит с тонкими линиями остальных элементов.</p>
+
+</aside>
+<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion01.jpg" alt="Интерфейсы фильма Oblivion">
+
+<aside>
+	<h2>Интерактивный стол</h2>
+	<p>Стол был построен практическим и полностью функциональным, так что все интерфейсы сняты на камеру. Стол состоит из 4 экранов: основная карта, которую Вика использовала для мониторинга дронов, бабблшипа и платформ, монитор беспилотников, который отслеживал все их ключевые показатели и состояние топлива, монитор гидроагрегата, который отображал ход сбора ресурсов и экран погоды, который показывал состояние Tet и также ключевые показатели погодных систем. </p>
+
+	<p>Помимо основного стола на базе был дополнительный экран диагностической карты на белой столешнице, которую герои смотрят во время завтрака.</p>
+</aside>
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+		<figure class="break">
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00009.jpg" data-size="1920x804">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00009.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion02.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion02.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion03.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion03.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion04.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion04.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion05.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion05.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion06.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion06.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion07.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion07.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion08.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion08.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion09.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion09.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion10.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion10.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion11.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion11.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion12.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion12.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion13.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion13.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion14.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion14.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion15.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion15.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion16.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion16.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion17.jpg" data-size="1280x720">
+				<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion17.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+	</div>
+</div>
+
+<aside>
+	<h2>Бабблшип</h2>
+	<p>Вертолет Джека, замечательное творение Дэниела Саймона под названием Бабблшип, был основным транспортом в фильме. Его интерфейсы делались дольше всего: пришлось изучать ИЛС реальных вертолетов и самолетов, модернизируя эстетику и сохраняя ключевые функциональные возможности. Сам образ интерфейса — голограмма, встроенная в сферическую стеклянную кабину пилота. Он максимально монохромный и незаметный в нормальном режиме полета.</p>
+	<p>Иконка опасности сначала была в виде черепа, но позже её упростили до восклицательного знака.</p>
+</aside>
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00001.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00001.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00002.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00002.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00003.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00003.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00005.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00005.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00004.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00004.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00006.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00006.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00007.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00007.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00008.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00008.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00009.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00009.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00010.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00010.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00011.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00011.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00012.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-bubbleship-00012.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+	</div>
+</div>
+
+<aside>
+	<h2>Дроны</h2>
+	<p>POV дронов тоже минималистичные. Это единственные столь яркие и контрастные сцены с фильме.</p>
+</aside>
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00002.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00002.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00003.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00003.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure class="break">
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00029.jpg" data-size="1920x804">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00029.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00004.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00004.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00005.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00005.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00006.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00006.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00007.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00007.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00010.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00010.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-000041.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-000041.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00008.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00008.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00009.jpg" data-size="1280x720">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion-drone-00009.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+	</div>
+</div>
+
+<article>
+	<div class="icon">↯</div>
+	<div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="71462911"></div>
+</article>
+<aside>
+	<h2>Типографика</h2>
+	<p>Основной шрифт интерфейса называется <a href="https://www.typewolf.com/site-of-the-day/fonts/blender">Blender</a>, раньше он не использовался в кино. Леттеринг построен так же вокруг сетки и опирается на рациональную строгость, в то же время ему свойственен некоторый гуманизм.</p>
+</aside>
+	<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-blender.svg?sanitize=true" alt="Интерфейсы фильма Oblivion" class="padded">
+	<div class="icon">&nbsp;</div>
+	<aside>
+		<p>Второй шрифт — DS TET. Он был создан специально для фильма. Он довольно плотно связан с нарративом. Тэт — это искуственный интеллект, который захватил станцию NASA и штампует клонов людей, которые добывают ресурсы для поддержания работы Тет. Таким образом ИИ создал все, чем пользуются клоны, в том числе средства коммуникации. И они очень похожи на людские с первого взгляда, но в деталях отличаются. Это именно те нюансы, которые могу быть незначительны для ИИ, но заметны человеку.</p>
+		<div class="icon"> </div>
+	</aside>
+
+	<img src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-ds-tet.png" alt="Интерфейсы фильма Oblivion" class="padded">
+	<div class="icon"></div>
+	<aside>
+		<p>NASA в основном использует Футуру и Гельветику для лейблов и табличек. На их основе и создавался новый шрифт. Те самые нюансы состоят в не всегда обоснованных смещения глифов друг относительно друга, в одинаковом дизайне некоторых строчных и заглавных букв, некоторые глифы вовсе сгруппированы в незнакомые современным людям знаки.</p>
+		<div class="icon">&nbsp;</div>
+		<p>Общая пластика шрифта, геометричная и модульная, в некоторой степени ретро-футуристичная и явно отсылает к шрифту Aldo Novarese Stop, созданном в 1971. </p>
+		
+		<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-stop.jpg" alt="Интерфейсы фильма Oblivion" data-action="zoom">
+		<p>Шрифт используется на ливрее дронов и бабблшипа, на посадочной площадке и маркировке башен-харвестеров.</p>
+	</aside>
+
+	
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-1.jpg" data-size="1920x800">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-1.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-2.jpg" data-size="1920x800">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-2.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-3.jpg" data-size="1920x800">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-3.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+		<figure>
+			<a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-4.jpg" data-size="1920x800">
+		   <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-tet-4.jpg" alt="Интерфейсы фильма Oblivion">
+			</a>
+		</figure>
+	</div>
+</div>
+
+<aside>
+	<p>Интересно, что на дисплее криокамеры NASA использован отдельный шрифт, подчеркивающий различие технологий людей и Тет.</p>
+		<img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/font-nasa.jpg" alt="Интерфейсы фильма Oblivion" data-action="zoom">
+	
+	<h2>Колористика</h2>
+	<p>Палитра достаточно типичная для научной фантастики и блокбастеров в целом, разве что привычный оранжево-синий контраст существенно обесцвечен.</p>
+</aside>
+	  
+    <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/barcode-oblivion.png" alt="Интерфейсы фильма Oblivion">
+	<figcaption>Цветовая гамма фильма. Для визуализации я взял каждый 150 кадр и уменьшил его до 3 пикселей по ширине. Всего использовано 1133 кадра.</figcaption>
+<aside>
+    <img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/colors-oblivion.svg?sanitize=true" alt="Интерфейсы фильма Oblivion">
+    <figcaption>Усредненная палитра</figcaption>
+	<p>Гамма интерфейсов выглядит очень сбалансированно и хорошо сочетается с колор грейдом видео. Яркие цвета используются только для жизненно-важных индикаторов: опасность, зона радиации, POV дронов.</p>
+
+
+
+	<h2>Нанорецензия</h2>
+	<p>Редкий случай, когда постапокалиптический мир показан не со стороны грязных повстанцев, а с точки зрения технократичных прилизанных поработителей. Удивительно, но в этом фильме полно недостатков, которые с лихвой компенсируются достоинствами:</p>
+<ul>
+	<li>Отчасти скучноватый и пустынный, но очень красивый сеттинг.</li>
+
+	<li>Вторичная общая идея, но поданная в такой обертке, что за героев и события переживаешь. И смотреть интересно, не смотря на то, что обо всех твистах догадываешься с двадцатой минуты, а о концовке — с половины фильма.</li>
+
+	<li>Совершенно деревянная Куриленко, но такая трогательная и убедительная Андреа Райзборо.</li>
+</ul>
+	<p>Ну а главное, что фильм напомнил мне старый добрый сайфай, от него пахнуло книгами Брэдбери, Лема и Саймака.</p>
+</aside>
+
+<article>
+	<div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="65008418"></div>
+</article>
+
+<div class="icon">&nbsp;</div>
+
+<div class="photoswipe">
+	<div class="photoswipe_grid">
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00001.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00001.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00003.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00003.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00004.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00004.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00005.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00005.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00006.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00006.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00007.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00007.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00008.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00008.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00010.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00010.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00011.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00011.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00012.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00012.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00013.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00013.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00015.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00015.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00016.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00016.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00017.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00017.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00018.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00018.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00020.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00020.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00021.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00021.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00023.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00023.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00024.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00024.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00025.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00025.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00026.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00026.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00027.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00027.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00028.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00028.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00030.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00030.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00031.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00031.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00032.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00032.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00033.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00033.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00034.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00034.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00035.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00035.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00036.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00036.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00037.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00037.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00038.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00038.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00039.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00039.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00040.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00040.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00042.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00042.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00043.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00043.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00044.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00044.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00045.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00045.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00047.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00047.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00048.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00048.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00049.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00049.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00053.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00053.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00054.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00054.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00055.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00055.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00056.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00056.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00057.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00057.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00058.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00058.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00059.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00059.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00060.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00060.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00061.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00061.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00062.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00062.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00063.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00063.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+<figure><a href="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00064.jpg" data-size="1920x804"><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/obl00064.jpg" alt="Интерфейсы фильма Oblivion"></a></figure>
+	</div>
+</div>
+
+
+
+
+
+<aside>
+	<div class="small">
+		<p>Права на изображения принадлежат Universal Studios, <a href="https://gmunk.com/">GMUNK</a> и используются с личного разрешения Bradley G Munkowitz.</p>
+	</div>
+</aside>
+
+
+<aside>
+	<nav>	
+	<!-- post tags -->
+	
+		<a href="/tag/сетки/" class="post-tag">сетки</a>
+	
+		<a href="/tag/модули/" class="post-tag">модули</a>
+	
+		<a href="/tag/помехи/" class="post-tag">помехи</a>
+	
+		<a href="/tag/сигналы-тревоги/" class="post-tag">сигналы тревоги</a>
+	
+		<a href="/tag/электронные-бинокли/" class="post-tag">электронные бинокли</a>
+	
+		<a href="/tag/кабины/" class="post-tag">кабины</a>
+	
+		<a href="/tag/ИЛС/" class="post-tag">ИЛС</a>
+	
+		<a href="/tag/прицелы/" class="post-tag">прицелы</a>
+	
+		<a href="/tag/pov/" class="post-tag">POV</a>
+	
+		<a href="/tag/радиоэлектроника/" class="post-tag">радиоэлектроника</a>
+	
+		<a href="/tag/карты/" class="post-tag">карты</a>
+	
+		<a href="/tag/схемы/" class="post-tag">схемы</a>
+	
+		<a href="/tag/планы/" class="post-tag">планы</a>
+	
+		<a href="/tag/шкалы/" class="post-tag">шкалы</a>
+	
+		<a href="/tag/локаторы/" class="post-tag">локаторы</a>
+	
+		<a href="/tag/радары/" class="post-tag">радары</a>
+	
+		<a href="/tag/интерактивные-столы/" class="post-tag">интерактивные столы</a>
+	
+		<a href="/tag/инфостены/" class="post-tag">инфостены</a>
+	
+	</nav>
+</aside>
+<div class="icon">&nbsp;</div>
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe.
+  It's a separate element, as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<article>
+
+<style type="text/css">
+
+.rel-grid ul, li {
+  list-style: none;
+}
+
+.rel-grid {
+  --auto-grid-min-size: 12rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 5rem;
+}
+
+.rel-grid p {
+	margin-top: .5rem;
+}
+
+.rel-grid img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rel-grid li:hover img {
+  transform: scale(1.05);
+}
+</style>
+
+
+<ul class="rel-grid">
+  
+    
+        <a href="/ui/iammother/"><li><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/iammother/iammother.jpg"><p>I Am Mother</p></li></a>
+    
+  
+    
+        <a href="/ui/oblivion/"><li><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/oblivion/oblivion.jpg"><p>Oblivion</p></li></a>
+    
+  
+    
+        <a href="/ui/bladerunner2049/"><li><img class="lazyload" data-src="https://raw.githubusercontent.com/antown/likewhoa-static/master/ui/bladerunner2049/bladerunner2049.jpg"><p>Blade Runner 2049</p></li></a>
+    
+  
+</ul>
+
+
+
+</article>
+
+<article class="footer">
+  <div class="f-left">Последняя запись — 
+ 
+30
+октября
+  
+2019,
+ всего их 61. Jekyll 3.8.5.
+</div>
+<div>tg @antwon</div>
+</article>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script>
+<script src="/static/index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js'></script>
+<!-- google counter -->
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26451647-3']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+<!-- end google counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(11453989, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/11453989" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>
